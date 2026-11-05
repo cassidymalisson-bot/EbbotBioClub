@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>Ebott Bio-Club | Registo de Campo</title>
+    <style>
+        body {
+            background-color: #f4f4f0;
+            color: #2b2b2b;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+        }
+        /* Menu Lateral */
+        sidebar {
+            width: 250px;
+            background-color: #e2e2d8;
+            height: 100vh;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+            position: fixed;
+            box-sizing: border-box;
+        }
+        sidebar h3 {
+            color: #1a4314;
+            font-size: 1.1em;
+        }
+        sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        sidebar li {
+            margin: 15px 0;
+        }
+        sidebar a {
+            color: #2b2b2b;
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+        }
+        sidebar a:hover {
+            background-color: #d0d0c4;
+            color: #1a4314;
+        }
+        .link-secreto {
+            color: #888 !important;
+            font-style: italic;
+            margin-top: 40px;
+            border-top: 1px dashed #ccc;
+            padding-top: 15px;
+        }
+        /* Conteúdo Principal */
+        main {
+            margin-left: 250px;
+            padding: 40px;
+            max-width: 700px;
+        }
+        h1 { color: #1a4314; }
+        h2 { border-bottom: 2px solid #1a4314; padding-bottom: 5px; margin-top: 40px; }
+        .data { font-size: 0.8em; color: #666; }
+        .secao { margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+    <!-- MENU LATERAL -->
+    <sidebar>
+        <h3>EBOTT BIO-CLUB</h3>
+        <p class="data">Base de Dados v1.04</p>
+        <ul>
+            <li><a href="#intro">1. Introdução</a></li>
+            <li><a href="#douradas">2. Flores Douradas</a></li>
+            <li><a href="#azuis">3. Flores Ecoantes</a></li>
+            <li><a href="#" class="link-secreto" onclick="pedirSenha()">🔒 Só Funcionários</a></li>
+        </ul>
+    </sidebar>
+
+    <!-- CONTEÚDO PRINCIPAL DO SITE -->
+    <main>
+        <div id="intro" class="secao">
+            <h1>Relatórios Botânicos da Encosta do Monte Ebott</h1>
+            <p class="data">Coordenador do Projeto: Dra. Alphys | Ano: 1998</p>
+            <hr>
+            <h2>Introdução</h2>
+            <p>Este portal destina-se ao arquivamento e estudo da flora peculiar encontrada nas imediações e cavernas superficiais do Monte Ebott. Devido a microclimas isolados e solo de composição anómala, a vegetação local apresenta propriedades biológicas únicas que diferem drasticamente do ecossistema exterior.</p>
+        </div>
+
+        <div id="douradas" class="secao">
+            <h2>Flores Douradas (Botão de Ouro)</h2>
+            <p>Conhecidas popularmente na região como botões de ouro, estas espécimes florais possuem uma coloração amarela intensa e brilhante. Notas de campo indicam que elas prosperam em solos ricos em matéria orgânica escura e locais com sombra profunda.</p>
+            <p><strong>Observação de laboratório:</strong> Em testes controlados de exposição à energia térmica subterrânea, observou-se que o pólen destas flores possui uma aderência incomum e reage de forma atípica quando entra em contacto prolongado com compostos biológicos complexos.</p>
+        </div>
+
+        <div id="azuis" class="secao">
+            <h2>Flores Ecoantes (Flores Azuis)</h2>
+            <p>Uma das descobertas mais fascinantes da fauna subterrânea rasa. As flores ecoantes possuem pétalas de tonalidade azulada translúcida e uma estrutura interna porosa semelhante a um meio de gravação acústica.</p>
+            <p><strong>Comportamento registado:</strong> A flor possui a capacidade de absorver vibrações sonoras no ambiente imediato e reproduzir fielmente qualquer palavra ou som que lhe tenha sido dito anteriormente, repetindo a última frase gravada de forma contínua até que uma nova emissão sonora ocorra.</p>
+        </div>
+    </main>
+
+    <!-- SCRIPT PARA A PALAVRA-PASSE -->
+    <script>
+        function pedirSenha() {
+            let senha = prompt("ACESSO RESTRITO\nIntroduza a chave de autorização:");
+            
+            // Podes alterar "1998_CORE" para a palavra-passe que quiseres
+            if (senha === "1998_CORE") {
+                alert("Acesso concedido. A redirecionar para os registos confidenciais...");
+                window.location.href = "terminal_secreto.html"; // Página que vai abrir se acertar
+            } else if (senha !== null) {
+                alert("ACESSO NEGADO: Chave incorreta.");
+            }
+        }
+    </script>
+
+    <!-- 
+        REGISTRO DE SEGURANÇA - CAMERA 04 (Escondido no código para a pista)
+        O ficheiro de vídeo da investigação foi arquivado em:
+        https://www.youtube.com/watch?v=SEU_CODIGO_AQUI
+    -->
+
+</body>
+</html>
