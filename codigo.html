@@ -4,81 +4,22 @@
     <meta charset="UTF-8">
     <title>SYS_ROOT // Ebott Bio-Archive</title>
     <style>
-        body { 
-            background-color: #050505; 
-            color: #00ff41; 
-            font-family: 'Courier New', Courier, monospace; 
-            margin: 0; 
-            display: flex; 
-        }
-        sidebar { 
-            width: 270px; 
-            background-color: #0a0a0a; 
-            height: 100vh; 
-            padding: 20px; 
-            border-right: 1px solid #00ff41; 
-            position: fixed; 
-            box-sizing: border-box; 
-        }
-        sidebar h3 { 
-            color: #00ff41; 
-            font-size: 1.1em; 
-        }
-        sidebar ul { 
-            list-style: none; 
-            padding: 0; 
-        }
-        sidebar li { 
-            margin: 15px 0; 
-        }
-        sidebar a { 
-            color: #00aa28; 
-            text-decoration: none; 
-            display: block; 
-            padding: 8px; 
-            border-left: 3px solid transparent; 
-        }
-        sidebar a:hover, sidebar a.ativo { 
-            background-color: #001a05; 
-            color: #00ff41; 
-            border-left: 3px solid #00ff41; 
-        }
-        .link-secreto { 
-            color: #ff3333 !important; 
-            font-style: italic; 
-            margin-top: 50px; 
-            border-top: 1px dashed #00ff41; 
-            padding-top: 15px; 
-            border-left: none !important; 
-            cursor: pointer; 
-        }
-        .link-secreto:hover { 
-            color: #ff0000 !important; 
-            background-color: transparent !important; 
-        }
-        main { 
-            margin-left: 270px; 
-            padding: 40px; 
-            max-width: 750px; 
-        }
+        body { background-color: #050505; color: #00ff41; font-family: 'Courier New', Courier, monospace; margin: 0; display: flex; }
+        sidebar { width: 270px; background-color: #0a0a0a; height: 100vh; padding: 20px; border-right: 1px solid #00ff41; position: fixed; box-sizing: border-box; }
+        sidebar h3 { color: #00ff41; font-size: 1.1em; }
+        sidebar ul { list-style: none; padding: 0; }
+        sidebar li { margin: 15px 0; }
+        sidebar a { color: #00aa28; text-decoration: none; display: block; padding: 8px; border-left: 3px solid transparent; }
+        sidebar a:hover, sidebar a.ativo { background-color: #001a05; color: #00ff41; border-left: 3px solid #00ff41; }
+        .link-secreto { color: #ff3333 !important; font-style: italic; margin-top: 50px; border-top: 1px dashed #00ff41; padding-top: 15px; border-left: none !important; cursor: pointer; }
+        .link-secreto:hover { color: #ff0000 !important; background-color: transparent !important; }
+        main { margin-left: 270px; padding: 40px; max-width: 750px; }
         h1 { color: #00ff41; font-size: 1.5em; text-shadow: 0 0 5px rgba(0,255,65,0.4); }
         h2 { border-bottom: 2px solid #00ff41; padding-bottom: 5px; margin-top: 30px; font-size: 1.2em; }
         .data { font-size: 0.8em; color: #008822; }
-        .terminal-box {
-            background-color: #000;
-            border: 1px solid #00ff41;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
-        }
-        .blinking-cursor {
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+        .terminal-box { background-color: #000; border: 1px solid #00ff41; padding: 20px; margin-top: 20px; box-shadow: 0 0 10px rgba(0, 255, 65, 0.1); }
+        .blinking-cursor { animation: blink 1s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
     </style>
 </head>
 <body>
@@ -101,7 +42,7 @@
         <hr>
         
         <h2>Logs de Sistema e Cifragem de Dados</h2>
-        <p>Esta secção armazena os blocos de código binário e de rede recuperados das câmaras de ventilação térmica do Monte Ebott. O acesso direto foi desativado por ordens superiores do protocolo de segurança.</p>
+        <p>Esta secção armazena os blocos de código binário e de rede recuperados das câmaras de ventilação térmica do Monte Ebott. O acesso direto foi desativado por ordens superiores.</p>
         
         <div class="terminal-box">
             <p>> root@ebott-core-sys:~# cat /var/log/missing_children_199x.log</p>
@@ -112,25 +53,19 @@
             <p>ALMA EXTRAÍDA: 6/6 <span class="blinking-cursor">_</span></p>
         </div>
 
-        <p>Se tens a chave de autorização correta obtida através da investigação audiovisual externa, utiliza a opção de <strong>Acesso Restrito</strong> no menu lateral para injetar o comando de desbloqueio.</p>
+        <p>Se tens a chave de autorização correta (<strong>1998_CORE</strong>), utiliza a opção de <strong>Acesso Restrito</strong> no menu lateral para desbloquear os registos.</p>
     </main>
 
     <script>
         function pedirSenha() {
             let senha = prompt("TERMINAL DE SEGURANÇA - LAB\nIntroduza a chave de autorização:");
             if (senha === "1998_CORE") {
-                alert("Autenticação bem-sucedida. A redirecionar...");
-                window.location.href = "https://www.youtube.com/watch?v=SEU_CODIGO_AQUI";
+                alert("Autenticação bem-sucedida. A abrir registos confidenciais...");
+                window.location.href = "experimento_falhado.html";
             } else if (senha !== null) {
                 alert("ACESSO NEGADO: Chave inválida.");
             }
         }
     </script>
-
-    <!-- 
-        F12 Investigação:
-        Linha de código oculta: A chave de acesso principal para o terminal é 1998_CORE.
-        Não partilhes esta linha com a polícia de superficie.
-    -->
 </body>
 </html>
