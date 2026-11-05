@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>Flores Ecoantes | Ebott Bio-Archive</title>
+    <style>
+        body { background-color: #f4f4f0; color: #2b2b2b; font-family: 'Courier New', Courier, monospace; margin: 0; display: flex; }
+        sidebar { width: 270px; background-color: #e2e2d8; height: 100vh; padding: 20px; border-right: 1px solid #ccc; position: fixed; box-sizing: border-box; }
+        sidebar h3 { color: #1a4314; font-size: 1.1em; }
+        sidebar ul { list-style: none; padding: 0; }
+        sidebar li { margin: 15px 0; }
+        sidebar a { color: #2b2b2b; text-decoration: none; display: block; padding: 8px; border-left: 3px solid transparent; }
+        sidebar a:hover, sidebar a.ativo { background-color: #d0d0c4; color: #1a4314; border-left: 3px solid #1a4314; }
+        .link-secreto { color: #888 !important; font-style: italic; margin-top: 50px; border-top: 1px dashed #ccc; padding-top: 15px; border-left: none !important; cursor: pointer; }
+        .link-secreto:hover { color: #ff0000 !important; background-color: transparent !important; }
+        main { margin-left: 270px; padding: 40px; max-width: 750px; }
+        h1 { color: #1a4314; font-size: 1.5em; }
+        h2 { border-bottom: 2px solid #1a4314; padding-bottom: 5px; margin-top: 30px; font-size: 1.2em; }
+        .data { font-size: 0.8em; color: #666; }
+        .destaque-real { background-color: #eaeae2; padding: 12px; border-left: 3px solid #666; margin: 15px 0; font-size: 0.95em; }
+        .log-secreto { background-color: #111b2b; color: #cce6ff; padding: 15px; border-left: 4px solid #3399ff; margin-top: 20px; }
+    </style>
+</head>
+<body>
 
+    <sidebar>
+        <h3>EBOTT BIO-ARCHIVE</h3>
+        <p class="data">Terminal v2.4 - Superfície</p>
+        <ul>
+            <li><a href="index.html">1. Introdução Geral</a></li>
+            <li><a href="flores_douradas.html">2. Botão-de-Ouro (E. Aureus)</a></li>
+            <li><a href="flores_ecoantes.html" class="ativo">3. Flores Ecoantes</a></li>
+            <li><a class="link-secreto" onclick="pedirSenha()">🔒 Acesso Restrito</a></li>
+        </ul>
+    </sidebar>
+
+    <main>
+        <h1>Espécime: Flor Ecoante (*Acoustica Caeruleus*)</h1>
+        <p class="data">Classificação de Campo: Amostra #09-Echo | Estado: Gravador Ativo</p>
+        <hr>
+        
+        <h2>Análise Acústica e Estrutural</h2>
+        <p>Embora a biologia moderna desconheça plantas capazes de reter e reproduzir ondas sonoras como fitas magnéticas, a microestrutura celular das pétalas destas espécimes azuis funciona como um transdutor biológico natural de alta precisão.</p>
+        
+        <div class="destaque-real">
+            <strong>Comportamento Registado:</strong> A planta absorve vibrações de áudio do ambiente e repete a última frase gravada de forma síncrona até que novas ondas sonoras incidam sobre a sua superfície translúcida.
+        </div>
+
+        <div class="log-secreto">
+            <strong>REGISTO INTERNO DE LABORATÓRIO (NÃOINDEXADO):</strong><br>
+            <em>"Dra. Alphys: Deixei um lote de flores ecoantes na câmara de testes subterrânea perto do poço de queda. À noite, elas começam a reproduzir sons automaticamente, mesmo sem ninguém a falar no laboratório. Ouvem-se vozes infantis a chorar... e chamadas de socorro repetidas vezes. São as vozes das crianças dadas como desaparecidas pela polícia de Ebott nas últimas semanas. Elas não fugiram da montanha. Elas caíram lá para dentro, e as flores guardaram as suas últimas palavras."</em>
+        </div>
+    </main>
+
+    <script>
+        function pedirSenha() {
+            let senha = prompt("TERMINAL DE SEGURANÇA - LAB\nIntroduza a chave de autorização:");
+            if (senha === "1998_CORE") {
+                alert("Autenticação bem-sucedida. A redirecionar...");
+                window.location.href = "https://www.youtube.com/watch?v=SEU_CODIGO_AQUI";
+            } else if (senha !== null) {
+                alert("ACESSO NEGADO: Chave inválida.");
+            }
+        }
+    </script>
+</body>
+</html>
