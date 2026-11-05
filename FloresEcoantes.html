@@ -30,6 +30,7 @@
             <li><a href="index.html">1. Introdução Geral</a></li>
             <li><a href="flores_douradas.html">2. Botão-de-Ouro (E. Aureus)</a></li>
             <li><a href="flores_ecoantes.html" class="ativo">3. Flores Ecoantes</a></li>
+            <li><a href="codigo.html">4. Registo de Código / CORE</a></li>
             <li><a class="link-secreto" onclick="pedirSenha()">🔒 Acesso Restrito</a></li>
         </ul>
     </sidebar>
@@ -40,7 +41,7 @@
         <hr>
         
         <h2>Análise Acústica e Estrutural</h2>
-        <p>Embora a biologia moderna desconheça plantas capazes de reter e reproduzir ondas sonoras como fitas magnéticas, a microestrutura celular das pétalas destas espécimes azuis funciona como um transdutor biológico natural de alta precisão.</p>
+        <p>Embora a biologia moderna desconheça plantas capazes de reter e reproduzir ondas sonoras como fitas magnéticas, a microestrutura celular das pétalas destas espécimes azules funciona como um transdutor biológico natural de alta precisão.</p>
         
         <div class="destaque-real">
             <strong>Comportamento Registado:</strong> A planta absorve vibrações de áudio do ambiente e repete a última frase gravada de forma síncrona até que novas ondas sonoras incidam sobre a sua superfície translúcida.
@@ -56,8 +57,8 @@
         function pedirSenha() {
             let senha = prompt("TERMINAL DE SEGURANÇA - LAB\nIntroduza a chave de autorização:");
             if (senha === "1998_CORE") {
-                alert("Autenticação bem-sucedida. A redirecionar...");
-                window.location.href = "https://www.youtube.com/watch?v=SEU_CODIGO_AQUI";
+                alert("Autenticação bem-sucedida. A abrir registos confidenciais...");
+                window.location.href = "experimento_falhado.html";
             } else if (senha !== null) {
                 alert("ACESSO NEGADO: Chave inválida.");
             }
