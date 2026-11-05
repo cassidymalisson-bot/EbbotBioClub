@@ -29,6 +29,7 @@
             <li><a href="index.html" class="ativo">1. Introdução Geral</a></li>
             <li><a href="flores_douradas.html">2. Botão-de-Ouro (E. Aureus)</a></li>
             <li><a href="flores_ecoantes.html">3. Flores Ecoantes</a></li>
+            <li><a href="codigo.html">4. Registo de Código / CORE</a></li>
             <li><a class="link-secreto" onclick="pedirSenha()">🔒 Acesso Restrito</a></li>
         </ul>
     </sidebar>
@@ -45,25 +46,19 @@
             <strong>Contexto Ecológico:</strong> A flora da região exibe uma capacidade de adaptação atípica à ausência de luz solar direta. Contudo, relatórios internos recentes de meados de outubro de 1998 apontam para anomalias químicas inexplicáveis em amostras recolhidas na profundidade do poço principal.
         </div>
 
-        <p>Selecione uma categoria no menu lateral esquerdo para consultar os relatórios detalhados de espécimes ou aceda aos registos de campo restritos caso possua credenciais de autorização.</p>
+        <p>Selecione uma categoria no menu lateral esquerdo para consultar os relatórios detalhados ou aceda aos registos confidenciais caso possua credenciais de autorização.</p>
     </main>
 
     <script>
         function pedirSenha() {
             let senha = prompt("TERMINAL DE SEGURANÇA - LAB\nIntroduza a chave de autorização:");
             if (senha === "1998_CORE") {
-                alert("Autenticação bem-sucedida. A redirecionar...");
-                window.location.href = "https://www.youtube.com/watch?v=SEU_CODIGO_AQUI"; // Coloca aqui o teu link do YouTube
+                alert("Autenticação bem-sucedida. A abrir registos confidenciais...");
+                window.location.href = "experimento_falhado.html";
             } else if (senha !== null) {
                 alert("ACESSO NEGADO: Chave inválida.");
             }
         }
     </script>
-    
-    <!-- 
-        F12 Investigação:
-        Relatório policial oculto: As crianças não se perderam na floresta. 
-        As caraterísticas do solo indicam sucção vertical em direção ao Subsolo.
-    -->
 </body>
 </html>
