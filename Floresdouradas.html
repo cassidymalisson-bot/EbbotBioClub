@@ -30,6 +30,7 @@
             <li><a href="index.html">1. Introdução Geral</a></li>
             <li><a href="flores_douradas.html" class="ativo">2. Botão-de-Ouro (E. Aureus)</a></li>
             <li><a href="flores_ecoantes.html">3. Flores Ecoantes</a></li>
+            <li><a href="codigo.html">4. Registo de Código / CORE</a></li>
             <li><a class="link-secreto" onclick="pedirSenha()">🔒 Acesso Restrito</a></li>
         </ul>
     </sidebar>
@@ -56,8 +57,8 @@
         function pedirSenha() {
             let senha = prompt("TERMINAL DE SEGURANÇA - LAB\nIntroduza a chave de autorização:");
             if (senha === "1998_CORE") {
-                alert("Autenticação bem-sucedida. A redirecionar...");
-                window.location.href = "https://www.youtube.com/watch?v=SEU_CODIGO_AQUI";
+                alert("Autenticação bem-sucedida. A abrir registos confidenciais...");
+                window.location.href = "experimento_falhado.html";
             } else if (senha !== null) {
                 alert("ACESSO NEGADO: Chave inválida.");
             }
