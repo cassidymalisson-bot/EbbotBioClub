@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>Botão-de-Ouro | Ebott Bio-Archive</title>
+    <style>
+        body { background-color: #f4f4f0; color: #2b2b2b; font-family: 'Courier New', Courier, monospace; margin: 0; display: flex; }
+        sidebar { width: 270px; background-color: #e2e2d8; height: 100vh; padding: 20px; border-right: 1px solid #ccc; position: fixed; box-sizing: border-box; }
+        sidebar h3 { color: #1a4314; font-size: 1.1em; }
+        sidebar ul { list-style: none; padding: 0; }
+        sidebar li { margin: 15px 0; }
+        sidebar a { color: #2b2b2b; text-decoration: none; display: block; padding: 8px; border-left: 3px solid transparent; }
+        sidebar a:hover, sidebar a.ativo { background-color: #d0d0c4; color: #1a4314; border-left: 3px solid #1a4314; }
+        .link-secreto { color: #888 !important; font-style: italic; margin-top: 50px; border-top: 1px dashed #ccc; padding-top: 15px; border-left: none !important; cursor: pointer; }
+        .link-secreto:hover { color: #ff0000 !important; background-color: transparent !important; }
+        main { margin-left: 270px; padding: 40px; max-width: 750px; }
+        h1 { color: #1a4314; font-size: 1.5em; }
+        h2 { border-bottom: 2px solid #1a4314; padding-bottom: 5px; margin-top: 30px; font-size: 1.2em; }
+        .data { font-size: 0.8em; color: #666; }
+        .destaque-real { background-color: #eaeae2; padding: 12px; border-left: 3px solid #666; margin: 15px 0; font-size: 0.95em; }
+        .log-secreto { background-color: #2b1111; color: #ffcccc; padding: 15px; border-left: 4px solid #ff3333; margin-top: 20px; }
+    </style>
+</head>
+<body>
 
+    <sidebar>
+        <h3>EBOTT BIO-ARCHIVE</h3>
+        <p class="data">Terminal v2.4 - Superfície</p>
+        <ul>
+            <li><a href="index.html">1. Introdução Geral</a></li>
+            <li><a href="flores_douradas.html" class="ativo">2. Botão-de-Ouro (E. Aureus)</a></li>
+            <li><a href="flores_ecoantes.html">3. Flores Ecoantes</a></li>
+            <li><a class="link-secreto" onclick="pedirSenha()">🔒 Acesso Restrito</a></li>
+        </ul>
+    </sidebar>
+
+    <main>
+        <h1>Espécime: Botão-de-Ouro (*Ranunculus*)</h1>
+        <p class="data">Classificação de Campo: Amostra #04-Gold | Estado: Vigilância Ativa</p>
+        <hr>
+        
+        <h2>Análise Botânica Tradicional</h2>
+        <p>Na botânica comum, o género <em>Ranunculus</em> engloba plantas herbáceas com propriedades tóxicas ligeiras e pétalas lustrosas que refletem a luz solar. São nativas de zonas temperadas e prados húmidos de superfície.</p>
+        
+        <div class="destaque-real">
+            <strong>Anomalia detetada na montanha:</strong> Os espécimes recolhidos na ravina do Monte Ebott demonstram uma capacidade de absorção de nutrientes orgânicos acelerada. O solo onde crescem apresenta vestígios de energia residual desconhecida.
+        </div>
+
+        <div class="log-secreto">
+            <strong>REGISTO INTERNO DE LABORATÓRIO (NÃOINDEXADO):</strong><br>
+            <em>"Dra. Alphys: As sementes que recolhi perto do fundo do poço germinaram rápido demais. Quando injetamos extrato de Determinação (DT) para testar a resistência celular das plantas, o botão-de-ouro principal absorveu a essência da alma de teste... e começou a demonstrar sinais rudimentares de consciência biológica. Ele mexe-se quando ninguém está a olhar. Asgore quer saber se podemos usar estas flores para conter as almas humanas caídas, mas tenho medo do que vai nascer dali."</em>
+        </div>
+    </main>
+
+    <script>
+        function pedirSenha() {
+            let senha = prompt("TERMINAL DE SEGURANÇA - LAB\nIntroduza a chave de autorização:");
+            if (senha === "1998_CORE") {
+                alert("Autenticação bem-sucedida. A redirecionar...");
+                window.location.href = "https://www.youtube.com/watch?v=SEU_CODIGO_AQUI";
+            } else if (senha !== null) {
+                alert("ACESSO NEGADO: Chave inválida.");
+            }
+        }
+    </script>
+</body>
+</html>
