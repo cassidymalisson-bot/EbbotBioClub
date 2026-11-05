@@ -2,7 +2,7 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <title>Ebott Bio-Club | Registo de Campo</title>
+    <title>Ebott Bio-Club | Registo de Campo 199X</title>
     <style>
         body {
             background-color: #f4f4f0;
@@ -13,7 +13,7 @@
         }
         /* Menu Lateral */
         sidebar {
-            width: 250px;
+            width: 260px;
             background-color: #e2e2d8;
             height: 100vh;
             padding: 20px;
@@ -36,29 +36,45 @@
             color: #2b2b2b;
             text-decoration: none;
             display: block;
-            padding: 5px;
+            padding: 8px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
         }
-        sidebar a:hover {
+        sidebar a:hover, sidebar a.ativo {
             background-color: #d0d0c4;
             color: #1a4314;
+            border-left: 3px solid #1a4314;
         }
         .link-secreto {
             color: #888 !important;
             font-style: italic;
-            margin-top: 40px;
+            margin-top: 50px;
             border-top: 1px dashed #ccc;
             padding-top: 15px;
+            border-left: none !important;
+        }
+        .link-secreto:hover {
+            color: #ff0000 !important;
+            background-color: transparent !important;
         }
         /* Conteúdo Principal */
         main {
-            margin-left: 250px;
+            margin-left: 260px;
             padding: 40px;
-            max-width: 700px;
+            max-width: 750px;
         }
-        h1 { color: #1a4314; }
-        h2 { border-bottom: 2px solid #1a4314; padding-bottom: 5px; margin-top: 40px; }
+        h1 { color: #1a4314; font-size: 1.5em; }
+        h2 { border-bottom: 2px solid #1a4314; padding-bottom: 5px; margin-top: 30px; font-size: 1.2em; }
         .data { font-size: 0.8em; color: #666; }
-        .secao { margin-bottom: 40px; }
+        .aba-conteudo { display: none; }
+        .aba-conteudo.ativo { display: block; }
+        .destaque-real {
+            background-color: #eaeae2;
+            padding: 12px;
+            border-left: 3px solid #666;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
     </style>
 </head>
 <body>
@@ -66,57 +82,95 @@
     <!-- MENU LATERAL -->
     <sidebar>
         <h3>EBOTT BIO-CLUB</h3>
-        <p class="data">Base de Dados v1.04</p>
+        <p class="data">Arquivo de Campo v2.1</p>
         <ul>
-            <li><a href="#intro">1. Introdução</a></li>
-            <li><a href="#douradas">2. Flores Douradas</a></li>
-            <li><a href="#azuis">3. Flores Ecoantes</a></li>
-            <li><a href="#" class="link-secreto" onclick="pedirSenha()">🔒 Só Funcionários</a></li>
+            <li><a onclick="mudarAba('intro')" id="btn-intro" class="ativo">1. Introdução ao Solo</a></li>
+            <li><a onclick="mudarAba('douradas')" id="btn-douradas">2. Botão-de-Ouro (E. Aureus)</a></li>
+            <li><a onclick="mudarAba('azuis')" id="btn-azuis">3. Flores Ecoantes</a></li>
+            <li><a class="link-secreto" onclick="pedirSenha()">🔒 Só Funcionários</a></li>
         </ul>
     </sidebar>
 
-    <!-- CONTEÚDO PRINCIPAL DO SITE -->
+    <!-- CONTEÚDO DAS ABAS -->
     <main>
-        <div id="intro" class="secao">
+        <!-- ABA 1: INTRODUÇÃO -->
+        <div id="intro" class="aba-conteudo ativo">
             <h1>Relatórios Botânicos da Encosta do Monte Ebott</h1>
-            <p class="data">Coordenador do Projeto: Dra. Alphys | Ano: 1998</p>
+            <p class="data">Coordenador de Campo: Dra. Alphys | Registo: Outubro de 1998</p>
             <hr>
-            <h2>Introdução</h2>
-            <p>Este portal destina-se ao arquivamento e estudo da flora peculiar encontrada nas imediações e cavernas superficiais do Monte Ebott. Devido a microclimas isolados e solo de composição anómala, a vegetação local apresenta propriedades biológicas únicas que diferem drasticamente do ecossistema exterior.</p>
+            <h2>Contexto Geológico e Anomalias</h2>
+            <p>Este portal armazena dados de campo recolhidos nas zonas de transição entre a superfície do Monte Ebott e as cavidades rochosas interiores. O foco principal deste projeto é estudar o comportamento de espécies vegetais submetidas a gradientes térmicos anómalos.</p>
+            
+            <div class="destaque-real">
+                <strong>Nota Científica (Real):</strong> Na biologia real, plantas que crescem em cavernas ou zonas de penumbra desenvolvem taxas de clorofila alteradas e forte dependência de minerais específicos do solo vulcânico. No entanto, as amostras recolhidas na câmara sul de Ebott desafiam as leis botânicas conhecidas.
+            </div>
+            
+            <p>Utilize o menu à esquerda para navegar pelos relatórios específicos de espécimes coletados por nossa equipe.</p>
         </div>
 
-        <div id="douradas" class="secao">
-            <h2>Flores Douradas (Botão de Ouro)</h2>
-            <p>Conhecidas popularmente na região como botões de ouro, estas espécimes florais possuem uma coloração amarela intensa e brilhante. Notas de campo indicam que elas prosperam em solos ricos em matéria orgânica escura e locais com sombra profunda.</p>
-            <p><strong>Observação de laboratório:</strong> Em testes controlados de exposição à energia térmica subterrânea, observou-se que o pólen destas flores possui uma aderência incomum e reage de forma atípica quando entra em contacto prolongado com compostos biológicos complexos.</p>
+        <!-- ABA 2: FLORES DOURADAS -->
+        <div id="douradas" class="aba-conteudo">
+            <h1>Espécime: Botão-de-Ouro (*Ranunculus*)</h1>
+            <p class="data">Classificação Local: Amostra #04-Gold | Estado: Sob Observação Rigorosa</p>
+            <hr>
+            <h2>Análise Botânica e Referência Real</h2>
+            <p>Na botânica tradicional, o género <em>Ranunculus</em> (conhecido vulgarmente como botão-de-ouro) é uma planta silvestre comum em prados húmidos, conhecida pelas suas pétalas brilhantes que refletem a luz de forma espetacular. Contudo, a variante encontrada no Monte Ebott exibe propriedades perturbadoras.</p>
+            
+            <div class="destaque-real">
+                <strong>Registo de Laboratório (Confidencial):</strong> 
+                <br><em>"Nota da Dra. A: As sementes trazidas da superfície interior demonstram uma capacidade de absorção de matéria orgânica assustadora. Quando expostas a fluidos biológicos sob alta concentração de Determinação (DT), o pólen emite um reflexo dourado persistente. Um dos nossos espécimes cultivados parece... reagir quando testamos vestígios biológicos deixados pelos últimos incidentes na montanha. Precisamos parar os testes com extrato de alma, mas Asgore insiste em resultados."</em>
+            </div>
         </div>
 
-        <div id="azuis" class="secao">
-            <h2>Flores Ecoantes (Flores Azuis)</h2>
-            <p>Uma das descobertas mais fascinantes da fauna subterrânea rasa. As flores ecoantes possuem pétalas de tonalidade azulada translúcida e uma estrutura interna porosa semelhante a um meio de gravação acústica.</p>
-            <p><strong>Comportamento registado:</strong> A flor possui a capacidade de absorver vibrações sonoras no ambiente imediato e reproduzir fielmente qualquer palavra ou som que lhe tenha sido dito anteriormente, repetindo a última frase gravada de forma contínua até que uma nova emissão sonora ocorra.</p>
+        <!-- ABA 3: FLORES AZUIS -->
+        <div id="azuis" class="aba-conteudo">
+            <h1>Espécime: Flor Ecoante (*Acoustica Caeruleus*)</h1>
+            <p class="data">Classificação Local: Amostra #09-Echo | Estado: Ativa / Emissores Sonoros</p>
+            <hr>
+            <h2>Análise Acústica e Comportamento</h2>
+            <p>Embora não existam equivalentes exatos na flora da superfície com esta exata mecânica de gravação biológica, certas plantas sensíveis a vibrações (como as carnívoras ou espécies que reagem ao toque) mostram que o reino vegetal possui respostas táteis avançadas. As flores ecoantes de Ebott levam isto ao extremo.</p>
+            
+            <div class="destaque-real">
+                <strong>Registo de Laboratório (Confidencial):</strong>
+                <br><em>"Nota da Dra. A: A estrutura celular destas pétalas azuis funciona como uma fita magnética orgânica. Ela absorve ondas sonoras do ar e as repete em loop. O problema é que à noite, quando o laboratório está vazio, as flores começam a reproduzir sussurros fragmentados que ninguém gravou... vozes infantis pedindo ajuda e coordenadas que não reconheço. De quem eram aquelas vozes antes de chegarem ao subsolo?"</em>
+            </div>
         </div>
     </main>
 
-    <!-- SCRIPT PARA A PALAVRA-PASSE -->
+    <!-- SCRIPT DE ALTERNÂNCIA DE ABAS E SENHA -->
     <script>
-        function pedirSenha() {
-            let senha = prompt("ACESSO RESTRITO\nIntroduza a chave de autorização:");
+        function mudarAba(idAba) {
+            // Esconde todas as abas
+            let abas = document.querySelectorAll('.aba-conteudo');
+            abas.forEach(aba => aba.classList.remove('ativo'));
             
-            // Podes alterar "1998_CORE" para a palavra-passe que quiseres
+            // Remove o destaque de todos os botões do menu
+            let botoes = document.querySelectorAll('sidebar ul li a');
+            botoes.forEach(btn => btn.classList.remove('ativo'));
+            
+            // Mostra a aba selecionada
+            document.getElementById(idAba).classList.add('ativo');
+            
+            // Destaca o botão correspondente no menu
+            document.getElementById('btn-' + idAba).classList.add('ativo');
+        }
+
+        function pedirSenha() {
+            let senha = prompt("ACESSO RESTRITO - SISTEMA DO LAB\nInsira a chave de autorização:");
+            
             if (senha === "1998_CORE") {
-                alert("Acesso concedido. A redirecionar para os registos confidenciais...");
-                window.location.href = "terminal_secreto.html"; // Página que vai abrir se acertar
+                alert("Acesso concedido. A abrir os registos de vídeo da câmara...");
+                window.location.href = "https://www.youtube.com/watch?v=SEU_CODIGO_AQUI"; // Podes trocar pelo link direto do vídeo ou página secreta
             } else if (senha !== null) {
-                alert("ACESSO NEGADO: Chave incorreta.");
+                alert("ACESSO NEGADO: Chave de segurança incorreta.");
             }
         }
     </script>
 
     <!-- 
-        REGISTRO DE SEGURANÇA - CAMERA 04 (Escondido no código para a pista)
-        O ficheiro de vídeo da investigação foi arquivado em:
-        https://www.youtube.com/watch?v=SEU_CODIGO_AQUI
+        Ficha de Segurança Oculta (F12):
+        Fita de recuperação policial #04 - 199X. 
+        As crianças nunca desapareceram na superfície. Elas caíram no poço.
     -->
 
 </body>
